@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@+id/board"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="30dp">
+
+        <Button
+            android:id="@+id/redBtnTxt"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="Red"
+            android:onClick="redTxtBtn"
+            android:clickable="true"/>
+
+        <Button
+            android:id="@+id/greenBtnTxt"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="Green"
+            android:onClick="greenTxtBtn"
+            android:clickable="true"/>
+
+        <Button
+            android:id="@+id/blueBtnTxt"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="Blue"
+            android:onClick="blueTxtBtn"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/redBtnClr"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#FF0000"
+            android:clickable="false"
+            android:onClick="redBtn"/>
+
+        <Button
+            android:id="@+id/greenBtnClr"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="#008000"
+            android:clickable="false"
+            android:onClick="greenBtn"/>
+
+        <Button
+            android:id="@+id/blueBtnClr"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#0000FF"
+            android:clickable="false"
+            android:onClick="blueBtn"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="125dp"
+        android:max="100"
+        android:progress="100" />
+
+
+</LinearLayout>
