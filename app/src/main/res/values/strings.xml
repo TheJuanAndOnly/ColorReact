@@ -2,5 +2,7 @@
     <string name="app_name">ColorReact</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_sounds">Sound</string>
+    <string name="action_vibration">Vibration</string>
+    <string name="action_reset">Reset Progress</string>
 </resources>

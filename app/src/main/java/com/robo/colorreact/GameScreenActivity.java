@@ -43,6 +43,12 @@ public class GameScreenActivity extends Activity{
         startProgressBar();
     }
 
+    @Override
+     public void onBackPressed() {
+        closeActivity();
+        super.onBackPressed();
+    }
+
     public void newBoard() {
 
         rndTxt = (int) (3 * Math.random()) + 1;
