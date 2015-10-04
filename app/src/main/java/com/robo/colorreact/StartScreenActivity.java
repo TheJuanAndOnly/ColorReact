@@ -82,7 +82,7 @@ public class StartScreenActivity extends AppCompatActivity {
             editor.putInt("key", score);
             editor.apply();
 
-            highScoreTextView.setText("High Score: " + String.valueOf(highScore));
+            highScoreTextView.setText("High Score: " + String.valueOf(score));
         }
     }
 
