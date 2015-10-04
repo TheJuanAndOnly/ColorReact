@@ -1,6 +1,25 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context=".StartScreenActivity">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".StartScreenActivity">
+
+    <item
+        android:id="@+id/action_sounds"
+        android:title="@string/action_sounds"
+        android:orderInCategory="100"
+        android:checkable="true"
+        android:icon="@drawable/volume" />
+
+    <item
+        android:id="@+id/action_vibration"
+        android:title="@string/action_vibration"
+        android:orderInCategory="100"
+        android:checkable="true"
+        android:icon="@drawable/vibration"/>
+
+    <item
+        android:id="@+id/action_resetProgress"
+        android:title="@string/action_reset"
+        android:orderInCategory="100" />
+
 </menu>
