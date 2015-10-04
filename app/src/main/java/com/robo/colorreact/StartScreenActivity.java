@@ -121,13 +121,10 @@ public class StartScreenActivity extends AppCompatActivity {
             editor.putInt("highScore", score);
             editor.apply();
 
-<<<<<<< HEAD
             highScoreTextView.setText("High Score: " + String.valueOf(score));
-=======
             highScore = score;
 
             highScoreTextView.setText("High Score : " + String.valueOf(highScore));
->>>>>>> 453d7541a4d062fa5828659bfd8827dd6c5eff99
         }
     }
 
