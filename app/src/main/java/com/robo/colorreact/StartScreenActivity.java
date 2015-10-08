@@ -90,14 +90,17 @@ public class StartScreenActivity extends AppCompatActivity {
         alertdialog.show();
     }
 
+    public void gameModeLeft(View view) {
+    }
+
+    public void gameModeRight(View view) {
+    }
 
     public void startApp(View view) {
-
-        Intent startGame = new Intent(this, GameScreenActivity.class);
-        final int result = 1;
-        startActivityForResult(startGame, result);
-
-    }
+                Intent startGame = new Intent(this, GameScreenActivity.class);
+                final int result = 1;
+                startActivityForResult(startGame, result);
+        }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -127,4 +130,6 @@ public class StartScreenActivity extends AppCompatActivity {
             highScoreTextView.setText("High Score : " + String.valueOf(highScore));
         }
     }
+
+
 }

@@ -5,4 +5,6 @@
     <string name="action_sounds">Sound</string>
     <string name="action_vibration">Vibration</string>
     <string name="action_reset">Reset Progress</string>
+    <string name="left"><![CDATA[<]]></string>
+    <string name="right"><![CDATA[>]]></string>
 </resources>
