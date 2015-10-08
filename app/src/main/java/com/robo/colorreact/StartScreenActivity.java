@@ -127,5 +127,4 @@ public class StartScreenActivity extends AppCompatActivity {
             highScoreTextView.setText("High Score : " + String.valueOf(highScore));
         }
     }
-
 }

@@ -15,7 +15,7 @@ import android.widget.TextView;
  */
 public class GameScreenActivity extends Activity{
 
-    int rndTxt, rndClr,progress = 100, diff = 1;
+    int rndTxt, rndClr, progress = 100, diff = 1;
     double diffPart = 1;
     boolean clrTruth;
     TextView changeBoard;
