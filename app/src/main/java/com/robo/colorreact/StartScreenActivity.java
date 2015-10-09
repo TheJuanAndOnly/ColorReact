@@ -15,9 +15,9 @@ import android.widget.Toast;
 
 public class StartScreenActivity extends AppCompatActivity {
 
-    int score;
+    int score, gameModeToStart = 1;
     SharedPreferences prefs;
-    TextView highScoreTextView, scoreTextView;
+    TextView highScoreTextView, scoreTextView, gameModeTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,8 @@ public class StartScreenActivity extends AppCompatActivity {
         int highScore = prefs.getInt("highScore", 0);
 
         highScoreTextView = (TextView) findViewById(R.id.highScoreTextView);
-        scoreTextView =(TextView) findViewById(R.id.scoreTextView);
+        scoreTextView = (TextView) findViewById(R.id.scoreTextView);
+        gameModeTextView = (TextView) findViewById(R.id.gameModeTextView);
 
         highScoreTextView.setText("High Score: " + String.valueOf(highScore));
     }
@@ -91,15 +92,50 @@ public class StartScreenActivity extends AppCompatActivity {
     }
 
     public void gameModeLeft(View view) {
+        gameModeToStart--;
+        if (gameModeToStart > 2) gameModeToStart = 1;
+        else if (gameModeToStart < 1) gameModeToStart = 2;
+
+        switch (gameModeToStart) {
+            case 1:
+                gameModeTextView.setText(R.string.game_mode_1);
+                break;
+            case 2:
+                gameModeTextView.setText(R.string.game_mode_2);
+                break;
+        }
     }
 
     public void gameModeRight(View view) {
+        gameModeToStart ++;
+        if (gameModeToStart > 2) gameModeToStart = 1;
+        else if (gameModeToStart < 1) gameModeToStart = 2;
+
+        switch (gameModeToStart) {
+            case 1:
+                gameModeTextView.setText(R.string.game_mode_1);
+                break;
+            case 2:
+                gameModeTextView.setText(R.string.game_mode_2);
+                break;
+        }
     }
 
     public void startApp(View view) {
-                Intent startGame = new Intent(this, GameScreenActivity.class);
-                final int result = 1;
-                startActivityForResult(startGame, result);
+
+        switch (gameModeToStart) {
+            case 1:
+                Intent start1 = new Intent(this, GameScreenActivity.class);
+                final int result1 = 1;
+                startActivityForResult(start1, result1);
+                break;
+            case 2:
+                Intent start2 = new Intent(this, ThreesomeActivity.class);
+                final int result2 = 1;
+                startActivityForResult(start2, result2);
+                break;
+        }
+
         }
 
     @Override

@@ -7,4 +7,6 @@
     <string name="action_reset">Reset Progress</string>
     <string name="left"><![CDATA[<]]></string>
     <string name="right"><![CDATA[>]]></string>
+    <string name="game_mode_1">Classic</string>
+    <string name="game_mode_2">Threesome</string>
 </resources>

@@ -20,6 +20,10 @@
             android:screenOrientation="portrait"
             android:label=".gameScreenActivity"
             android:theme="@style/AppTheme"/>
+        <activity android:name=".ThreesomeActivity"
+            android:screenOrientation="portrait"
+            android:label=".threesomeActivity"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>
